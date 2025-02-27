@@ -22,3 +22,31 @@ jobs:
       run: cargo fmt --check
     - name: Run tests
       run: cargo test --verbose
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    if: needs.build.result == 'success'
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        cargo install cargo-release
+
+    - name: Release
+      env:
+        CARGO_REGISTORY_TOKEN: ${{ secrets.CARGO_REGISTORY_TOKEN }}
+      run: |
+        echo "Releasing a version..."
+        cargo release --execute
+
+    - name: Publish
+      env:
+        CARGO_REGISTORY_TOKEN: ${{ secrets.CARGO_REGISTORY_TOKEN }}
+      run: cargo publish
+    
+    
+
+
