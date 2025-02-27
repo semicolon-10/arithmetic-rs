@@ -3,4 +3,10 @@ name = "arithmetic-rs"
 version = "0.1.0"
 edition = "2024"
 
+description = "A math library for RUST"
+license = "MIT"
+repository = "https://github.com/semicolon-10/arithmetic-rs"
+homepage = "https://github.com/semicolon-10/arithmetic-rs"
+documentation = "https://docs.rs/arithmetic-rs"
+
 [dependencies]
