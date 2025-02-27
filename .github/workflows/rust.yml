@@ -37,14 +37,14 @@ jobs:
 
     - name: Release
       env:
-        CARGO_REGISTORY_TOKEN: ${{ secrets.CARGO_REGISTORY_TOKEN }}
+        CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
       run: |
         echo "Releasing a version..."
         cargo release --execute
 
     - name: Publish
       env:
-        CARGO_REGISTORY_TOKEN: ${{ secrets.CARGO_REGISTORY_TOKEN }}
+        CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
       run: cargo publish
     
     
