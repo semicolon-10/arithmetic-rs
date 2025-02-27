@@ -7,7 +7,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_add_positive_numbers(){
+    fn test_add_positive_numbers() {
         assert_eq!(add(2, 3), 5);
     }
 
@@ -18,7 +18,7 @@ mod tests {
 
     #[test]
     fn test_add_mixed_numbers() {
-        assert_eq!(add(-2, 3), 1);
+        assert_eq!(add(-2, 3), 6);
     }
 
     #[test]
