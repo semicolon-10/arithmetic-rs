@@ -18,7 +18,7 @@ mod tests {
 
     #[test]
     fn test_add_mixed_numbers() {
-        assert_eq!(add(-2, 3), 6);
+        assert_eq!(add(-2, 3), 1);
     }
 
     #[test]
